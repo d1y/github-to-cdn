@@ -1,0 +1,19 @@
+{
+  "name": "github-to-cdn",
+  "version": "0.0.1",
+  "description": "github link to cdn link",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/d1y/github-to-cdn"
+  },
+  "keywords": [
+    "github",
+    "cdn"
+  ],
+  "author": "d1y <chenhonzhou@gmail.com>",
+  "license": "MIT"
+}
