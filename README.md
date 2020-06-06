@@ -1,6 +1,6 @@
 # github-to-cdn
 
-cdn by [jsdelivr.com](https://www.jsdelivr.com)
+Mainly convert github address to cdn address to speed up the website. cdn by [jsdelivr.com](https://www.jsdelivr.com)
 
 ![](https://www.jsdelivr.com/img/logo-horizontal.svg)
 
@@ -15,13 +15,17 @@ exmaples
 ```js
 import ghCDN from 'github-to-cdn'
 
-const link = ghCDN.toCDNLink({
+// the reutrn `string` type
+
+const linkToObject = ghCDN({
   username: 'd1y',
   repo: 'ass-we-can',
   path: 'src/lite.json',
   branch: 'master'
 })
-const link = toCDNLink(`https://github.com/d1y/ass-we-can/blob/master/src/lite.json`)
 
-console.log(link)
+const linkToString = ghCDN(`https://github.com/d1y/ass-we-can/blob/master/src/lite.json`)
+
+console.log(linkToObject)
+console.log(linkToString)
 ```
