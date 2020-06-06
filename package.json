@@ -1,6 +1,6 @@
 {
   "name": "github-to-cdn",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "github link to cdn link",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,7 @@
     "github",
     "cdn"
   ],
+  "homepage": "github.com/d1y/github-to-cdn",
   "author": "d1y <chenhonzhou@gmail.com>",
   "license": "MIT"
 }
