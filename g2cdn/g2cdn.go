@@ -1,3 +1,5 @@
+// create by d1y<chenhonzhou@gmail.com>
+
 package g2cdn
 
 import (
@@ -129,6 +131,31 @@ func Parse(rawURL string, hasBlob bool) (Face, error) {
 	// var ul = pp.ToString()
 	// fmt.Println("ul", ul)
 	return pp, err
+}
+
+// Easy 最简单的用法, 直接返回 `url` 如果错误返回空字符串
+func Easy(u string, hasBlob bool) string {
+	face, e := Parse(u, hasBlob)
+	if e != nil {
+		return ""
+	}
+	return face.ToString()
+}
+
+// Check 检测链接是否符合`github-domain`标椎
+func Check(u string) bool {
+	x, e := url.Parse(u)
+	if e != nil {
+		return false
+	}
+	h := x.Hostname()
+	for _, item := range domains {
+		if item == h {
+			return true
+		}
+	}
+	var arr = strings.Split(h, ".")
+	return arr[1] == "github" && arr[2] == "io"
 }
 
 // 判断是否为空

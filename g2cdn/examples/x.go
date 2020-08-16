@@ -32,4 +32,10 @@ func main() {
 	var r = raw.ToString()
 	fmt.Println("r", r)
 
+	var url = g2cdn.Easy(`https://raw.githubusercontent.com/bukinoshita/is-github-repo/master/package.json`, false)
+	fmt.Println("url", url)
+
+	var f = g2cdn.Check(`https://github.com/d1y/github-to-cdn/blob/master/index.js`)
+	fmt.Println("f", f)
+
 }
