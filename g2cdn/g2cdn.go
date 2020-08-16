@@ -40,7 +40,7 @@ func New(config Config) (Face, error) {
 	}, nil
 }
 
-// ToString x
+// ToString 转换成 `url`
 func (face Face) ToString() string {
 	var config = face.Config
 	var username, repo, path, branch = config.Username, config.Repo, config.Path, config.Branch
